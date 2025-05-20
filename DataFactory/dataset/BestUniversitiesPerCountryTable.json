@@ -1,0 +1,59 @@
+{
+	"name": "BestUniversitiesPerCountryTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SQL Tables"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Rank",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Student_Population",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Students_to_Staff_Ratio",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Overall_Score",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Teaching",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Year",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "BestUniversitiesPerCountry"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

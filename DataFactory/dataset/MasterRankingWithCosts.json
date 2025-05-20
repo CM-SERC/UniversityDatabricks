@@ -1,0 +1,45 @@
+{
+	"name": "MasterRankingWithCosts",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV Files"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "MasterRankingWithCosts.csv",
+				"folderPath": "business-data",
+				"container": "university-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "Overall Score",
+				"type": "String"
+			},
+			{
+				"name": "Average_Cost",
+				"type": "String"
+			},
+			{
+				"name": "Score_to_Cost_Ratio",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

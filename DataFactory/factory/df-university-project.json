@@ -1,0 +1,9 @@
+{
+	"name": "df-university-project",
+	"location": "ukwest",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "52a2117a-5237-48fd-af58-cb421cc59cdf",
+		"tenantId": "54efe58d-72b7-45af-9a01-30ee5f377a71"
+	}
+}

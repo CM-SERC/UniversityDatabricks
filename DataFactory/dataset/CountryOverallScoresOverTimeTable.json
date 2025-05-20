@@ -1,0 +1,45 @@
+{
+	"name": "CountryOverallScoresOverTimeTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SQL Tables"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Average_Score",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Min_Score",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Max_Score",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CountryOverallScoresOverTime"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

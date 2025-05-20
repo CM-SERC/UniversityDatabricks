@@ -1,0 +1,40 @@
+{
+	"name": "BachelorRankingsWithCostsTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SQL Tables"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Overall_Score",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Average_Cost",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Score_to_Cost_Ratio",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "BachelorRankingsWithCosts"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
