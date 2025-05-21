@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-university-project"
+		},
+		"AzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"AzureDatabricks_LinkedService_accessToken": {
+			"value": ""
+		},
+		"AzureSqlDatabase_password": {
+			"value": ""
+		},
+		"AzureDatabricks_LinkedService_properties_typeProperties_existingClusterId": {
+			"value": "0514-112702-1at8qdzm"
+		},
+		"AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "project-car-sql-server.database.windows.net"
+		},
+		"AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "project-cars"
+		},
+		"AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "cmckibbin"
+		},
+		"Raw-Data-International-Education-Costs-Created_properties_typeProperties_scope": {
+			"value": "/subscriptions/a2e1277a-3fcf-4832-b393-251b9db1d060/resourceGroups/project-movies-etl-rg/providers/Microsoft.Storage/storageAccounts/moviesdatas"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
