@@ -26,9 +26,6 @@
 		"AzureSqlDatabase_properties_typeProperties_userName": {
 			"value": "cmckibbin"
 		},
-		"Raw-Data-International-Education-Costs-Created_properties_typeProperties_scope": {
-			"value": "/subscriptions/a2e1277a-3fcf-4832-b393-251b9db1d060/resourceGroups/project-movies-etl-rg/providers/Microsoft.Storage/storageAccounts/moviesdatas"
-		},
 		"containerUri": {
 			"value": ""
 		},

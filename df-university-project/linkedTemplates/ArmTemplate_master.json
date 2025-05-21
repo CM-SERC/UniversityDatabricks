@@ -35,10 +35,6 @@
 			"type": "string",
 			"defaultValue": "cmckibbin"
 		},
-		"Raw-Data-International-Education-Costs-Created_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/a2e1277a-3fcf-4832-b393-251b9db1d060/resourceGroups/project-movies-etl-rg/providers/Microsoft.Storage/storageAccounts/moviesdatas"
-		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -90,29 +86,6 @@
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "df-university-project_ArmTemplate_1",
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2024-03-01",
-			"properties": {
-				"mode": "incremental",
-				"templateLink": {
-					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"factoryName": {
-						"value": "[parameters('factoryName')]"
-					},
-					"Raw-Data-International-Education-Costs-Created_properties_typeProperties_scope": {
-						"value": "[parameters('Raw-Data-International-Education-Costs-Created_properties_typeProperties_scope')]"
-					}
-				}
-			},
-			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'df-university-project_ArmTemplate_0')]"
-			]
 		}
 	]
 }

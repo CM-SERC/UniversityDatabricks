@@ -34,10 +34,6 @@
 		"AzureSqlDatabase_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "cmckibbin"
-		},
-		"Raw-Data-International-Education-Costs-Created_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/a2e1277a-3fcf-4832-b393-251b9db1d060/resourceGroups/project-movies-etl-rg/providers/Microsoft.Storage/storageAccounts/moviesdatas"
 		}
 	},
 	"variables": {
@@ -1850,37 +1846,6 @@
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/Raw-Data-International-Education-Costs-Created')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "Process_University_Data",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/university-data/blobs/raw-data",
-					"blobPathEndsWith": "/International_Education_Costs.csv",
-					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('Raw-Data-International-Education-Costs-Created_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/Process_University_Data')]"
-			]
 		}
 	]
 }
